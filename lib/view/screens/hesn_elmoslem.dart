@@ -33,10 +33,10 @@ class HesnElmoslem extends StatelessWidget {
                                   Icons.arrow_back_ios,
                                   size: 20,
                                 ),
-                                Container(
-                                    height: 25,
-                                    width: 25,
-                                    child: Image.asset(controller.img[index])),
+                                // Container(
+                                //     height: 25,
+                                //     width: 25,
+                                //     child: Image.asset(controller.img[index])),
                               ],
                             )),
                       ),

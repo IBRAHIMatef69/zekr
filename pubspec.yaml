@@ -43,9 +43,7 @@ dependencies:
   flutter_qiblah: ^2.0.2
   get:
   get_storage:
-  flutter_local_notifications: ^5.0.0+3
-  workmanager: ^0.4.0
-  rxdart:
+
 
 
 dev_dependencies:
