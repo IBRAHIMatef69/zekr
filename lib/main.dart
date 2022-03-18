@@ -4,13 +4,12 @@ import 'package:get_storage/get_storage.dart';
 import 'package:workmanager/workmanager.dart';
 import 'package:zekr/routes/routes.dart';
 
-import 'package:zekr/view/screens/splach_screen.dart';
 
 import 'serveces/local_notification_services.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-    await Workmanager().initialize(callbackDispatcher, isInDebugMode: true);
+    await Workmanager().initialize(callbackDispatcher, );
 
   await GetStorage.init();
   runApp(const MyApp());
