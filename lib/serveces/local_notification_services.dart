@@ -6,7 +6,6 @@ import 'package:rxdart/rxdart.dart';
 import 'package:workmanager/workmanager.dart';
 import 'package:zekr/serveces/services.dart';
 
-import 'package:zekr/view/screens/home_screen.dart';
 
 FlutterLocalNotificationsPlugin? flutterLocalNotificationsPlugin;
 
