@@ -1,7 +1,3 @@
-import 'dart:async';
-
-import 'package:clipboard/clipboard.dart';
-import 'package:flutter_vibrate/flutter_vibrate.dart';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

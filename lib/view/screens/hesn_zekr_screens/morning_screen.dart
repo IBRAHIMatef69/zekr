@@ -1,15 +1,8 @@
-import 'dart:convert';
-
-import 'package:clipboard/clipboard.dart';
-import 'package:flutter_vibrate/flutter_vibrate.dart';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart' as rootBundle;
-import 'package:get/get.dart';
+ import 'package:get/get.dart';
 import 'package:zekr/logic/controller/morning_screen_controller.dart';
-import 'package:zekr/model/json_data_model.dart';
-import 'package:zekr/model/preyer_data.dart';
-import 'package:zekr/utils/themes.dart';
+
 import 'package:zekr/view/widgets/hesn_elmoslem_widget/zekr_container_widget.dart';
 import 'package:zekr/view/widgets/home_screen_widgets/app_bar_container_gradient.dart';
 

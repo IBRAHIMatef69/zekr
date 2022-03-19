@@ -3,15 +3,29 @@ import 'package:zekr/model/preyer_data.dart';
 import 'package:zekr/model/times_prey.dart';
 import 'package:zekr/serveces/prayer_time_services.dart';
 
-class PrayerAndLocationController extends GetxController {
+class PrayerAndLocationController extends GetxController
+    with StateMixin<dynamic> {
   @override
   void onInit() async {
-    // TODO: implement onInit
     super.onInit();
+    // await getLocaitionData();
+    // await getPrayerTimeData();
+    PrayerRimeServices().getTimesbyGet().then((value) {
+      change(value, status: RxStatus.success());
+    }, onError: (error) {
+      change(null, status: RxStatus.error(error.toString()));
+    });
     await getLocaitionData();
-    await getPrayerTimeData();
   }
-  List<Datee> li = [
+
+  // @override
+  // void onInit() async {
+  //   // TODO: implement onInit
+  //   super.onInit();
+  //   await getLocaitionData();
+  //   await getPrayerTimeData();
+  // }
+  List li = [
     Datee(name: 'الفجر', date: '05:10'),
     Datee(name: 'الشروق', date: '06:44'),
     Datee(name: 'الضهر', date: '11:49'),
@@ -19,8 +33,16 @@ class PrayerAndLocationController extends GetxController {
     Datee(name: 'المغرب', date: '04:55'),
     Datee(name: 'العشاء', date: '06:18'),
   ];
+  List eNames = [
+    "Fajr",
+    "Sunrise",
+    "Dhuhr",
+    "Asr",
+    "Maghrib",
+    "Isha",
+  ];
 
-  Data? prayerTimeList ;
+  Data? prayerTimeList;
 
   getLocaitionData() async {
     await PrayerRimeServices().getPosition();
@@ -30,10 +52,10 @@ class PrayerAndLocationController extends GetxController {
 
   getPrayerTimeData() async {
     try {
-      prayerTimeList = await PrayerRimeServices().timeGetData();
-
+      prayerTimeList = await PrayerRimeServices().getTimesbyGet();
     } catch (e) {
       Get.snackbar("$e", "$e");
+      print(e.toString());
     }
     update();
   }
