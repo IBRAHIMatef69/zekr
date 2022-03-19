@@ -9,13 +9,14 @@ import 'package:zekr/view/screens/hesn_zekr_screens/sleep_zekr.dart';
 
 class HesnScreenController extends GetxController {
   List<String> img = [
-    "assets/images/exit.png",
+    "assets/images/prayer.png",
     "assets/images/prayer (1).png",
     "assets/images/exit.png",
     "assets/images/sleeping.png",
-    "assets/images/pray.png",
-    "assets/images/pray (1).png",
     "assets/images/pray.png"
+    ,    "assets/images/pray (1).png","assets/images/pray.png",
+
+
   ];
 
   List<String> name = [

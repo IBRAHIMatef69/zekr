@@ -7,7 +7,7 @@ import 'package:zekr/model/quran_model.dart';
 class Services {
   Future<List> ReadJsonData() async {
     final jsondata =
-        await rootBundle.rootBundle.loadString('jsonfile/quranlist.json');
+        await rootBundle.rootBundle.loadString('assets/jsonfile/quranlist.json');
 
     final list = json.decode(jsondata) as List<dynamic>;
     return list.map((e) => QuranDataModel.fromJson(e)).toList();
@@ -15,7 +15,7 @@ class Services {
 
   Future<List<ZekrDataModel>> ReadZekrJsonData(fileName) async {
     final jsondata =
-        await rootBundle.rootBundle.loadString('jsonfile/$fileName.json');
+        await rootBundle.rootBundle.loadString('assets/jsonfile/$fileName.json');
 
     final list = json.decode(jsondata) as List<dynamic>;
     return list.map((e) => ZekrDataModel.fromJson(e)).toList();
