@@ -14,7 +14,7 @@ class HesnScreenController extends GetxController {
     "assets/images/exit.png",
     "assets/images/sleeping.png",
     "assets/images/pray.png"
-    ,    "assets/images/pray (1).png","assets/images/pray.png",
+    ,   "assets/images/prayer (1).png", "assets/images/pray (1).png",
 
 
   ];
