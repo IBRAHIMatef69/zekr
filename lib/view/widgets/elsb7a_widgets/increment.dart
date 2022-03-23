@@ -75,7 +75,7 @@ class Increment extends StatelessWidget {
         child: Card(
           elevation: 4,
           shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(45)),
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(55)),
           child: GetBuilder<Seb7aController>(
             builder: (_) {
               return InkWell(
