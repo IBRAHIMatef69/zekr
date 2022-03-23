@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:zekr/logic/controller/seb7a_controller.dart';
 import 'package:zekr/serveces/local_notification_services.dart';
-
+/*
 class Increment extends StatelessWidget {
   Increment({Key? key}) : super(key: key);
   final controller = Get.find<Seb7aController>();
@@ -53,6 +53,51 @@ class Increment extends StatelessWidget {
                       ))),
             );
           },
+        ),
+      ),
+    );
+  }
+}
+*/
+
+class Increment extends StatelessWidget {
+  Increment({Key? key}) : super(key: key);
+  final controller = Get.find<Seb7aController>();
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(top: 20),
+      child: SizedBox(
+
+        width: MediaQuery.of(context).size.width * .25,
+        height: MediaQuery.of(context).size.width * .3,
+        child: Card(
+          elevation: 4,
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(45)),
+          child: GetBuilder<Seb7aController>(
+            builder: (_) {
+              return InkWell(
+                onTap: () async {
+                  // controller.incrementCounter();
+
+                  controller.incremant();
+                  controller.viberate();
+                  controller.incrementStorage();
+                  controller.startTimer(1);
+                  // controller.prefsCounter = await _counter;
+                  // _incrementCounter();
+                },
+                child: ClipRRect(
+                  child: Image.asset(
+                    "assets/images/fingerprint.png",
+                    fit: BoxFit.fill,
+                  ),
+                ),
+              );
+            },
+          ),
         ),
       ),
     );

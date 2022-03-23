@@ -1,4 +1,3 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -10,7 +9,6 @@ import 'package:zekr/view/widgets/home_screen_widgets/app_bar_container_gradient
 
 class Night extends StatelessWidget {
   Night({Key? key}) : super(key: key);
-
 
   final controller = Get.put(NightScreenController());
 
@@ -39,11 +37,10 @@ class Night extends StatelessWidget {
           ),
         ),
       ),
-      body: ListView.builder(                  physics: BouncingScrollPhysics(),
-
+      body: ListView.builder(
+        physics: BouncingScrollPhysics(),
         itemCount: controller.lis.length,
         itemBuilder: (_, index) {
-
           return GetBuilder<NightScreenController>(
             builder: (_) {
               return ZekrContainerWidget(
@@ -60,6 +57,7 @@ class Night extends StatelessWidget {
                 color: controller.lis[index].num == 0
                     ? controller.lis[index].r
                     : controller.lis[index].g,
+                zekrCategory: 'أذكار المساء',
               );
             },
           );

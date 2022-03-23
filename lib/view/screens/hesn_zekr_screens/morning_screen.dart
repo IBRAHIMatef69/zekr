@@ -1,6 +1,5 @@
-
 import 'package:flutter/material.dart';
- import 'package:get/get.dart';
+import 'package:get/get.dart';
 import 'package:zekr/logic/controller/morning_screen_controller.dart';
 
 import 'package:zekr/view/widgets/hesn_elmoslem_widget/zekr_container_widget.dart';
@@ -57,6 +56,7 @@ class Morning extends StatelessWidget {
                   color: controller.lis[index].num == 0
                       ? controller.lis[index].r
                       : controller.lis[index].g,
+                  zekrCategory:  'أذكار الصباح',
                 );
               },
             );

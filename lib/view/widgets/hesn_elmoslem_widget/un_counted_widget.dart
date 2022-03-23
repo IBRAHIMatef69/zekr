@@ -25,7 +25,7 @@ class UnCounted extends StatelessWidget {
                   height: 45,
                   child: Center(
                     child: Text(
-                      'أذكار المساء',
+                      category,
                       textAlign: TextAlign.center,
                       style: TextStyle(
                           color: Colors.white,

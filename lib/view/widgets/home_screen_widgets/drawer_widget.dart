@@ -99,14 +99,21 @@ class DrawerWidget extends StatelessWidget {
                       ],
                     ),
                     Column(
+                      crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
-                        Text(
-                          'هذا التطبيق صنع من اجل التذكير'
-                          ' والتسبيح فلا تغفل عن نفسك',
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 15,
-                            color: Colors.black45,
+                        Container(
+                          padding: EdgeInsets.symmetric(horizontal: 10),
+                          child: Directionality(
+                            textDirection: TextDirection.rtl,
+                            child: Text(
+                              'هذا التطبيق صنع من اجل التذكير'
+                              'والتسبيح فلا تغفل عن نفسك',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 15,
+                                color: Colors.black45,
+                              ),
+                            ),
                           ),
                         ),
                         SizedBox(

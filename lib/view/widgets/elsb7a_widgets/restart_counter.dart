@@ -11,9 +11,10 @@ class RestartCounter extends StatelessWidget {
     return  Padding(
       padding: const EdgeInsets.only(top: 15),
       child: Container(
-        width: 110,
-        height: 70,
+        width: MediaQuery.of(context).size.width*.13,
+        height:  MediaQuery.of(context).size.width*.13,
         decoration: BoxDecoration(
+
             boxShadow: [
               BoxShadow(
                 color: Colors.grey.withOpacity(0.5),
@@ -28,9 +29,8 @@ class RestartCounter extends StatelessWidget {
                 colors: [
                   Color(0xff4E9F3D),
                   Color(0xff1E5128),
-                  Color(0xff191A19),
-                ]),
-            borderRadius: BorderRadius.circular(12)),
+                 ]),
+            borderRadius: BorderRadius.circular(35)),
         child: GetBuilder<Seb7aController>(
           builder: (_) {
             return InkWell(

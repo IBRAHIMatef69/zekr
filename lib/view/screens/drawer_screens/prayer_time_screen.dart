@@ -49,20 +49,24 @@ class PrayerTimeScreen extends GetView<PrayerAndLocationController> {
                             children: [
                               ListTile(
                                 trailing: Text(
-                                  "ميلادى",style: buildTextStyle2(),
+                                  "ميلادى",
+                                  style: buildTextStyle2(),
                                 ),
                                 leading: Text(
                                   state["date"]["readable"].toString(),
                                   style: buildTextStyle(),
                                 ),
                               ),
-                              SizedBox(height: SizeConfig.defaultSize,),
+                              SizedBox(
+                                height: SizeConfig.defaultSize,
+                              ),
                               ListTile(
                                 trailing: Text(
                                   "هجري",
                                   style: buildTextStyle2(),
                                 ),
-                                leading: Column(crossAxisAlignment: CrossAxisAlignment.start,
+                                leading: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
                                       "${state["date"]["hijri"]["weekday"]["ar"]}/${state["date"]["hijri"]["month"]["ar"]}/${state["date"]["hijri"]["year"]}",
@@ -84,19 +88,33 @@ class PrayerTimeScreen extends GetView<PrayerAndLocationController> {
                     child: ListView.separated(
                         shrinkWrap: true,
                         itemBuilder: (context, index) {
-                          return ListTile(dense: true,
-                            leading: Text(state["timings"][cc.eNames[index]],style: buildTextStyle(),),
-                            trailing: Text(cc.li[index].name,style: buildTextStyle2(),),
+                          return ListTile(
+                            dense: true,
+                            leading: Text(
+                              state["timings"][cc.eNames[index]],
+                              style: buildTextStyle(),
+                            ),
+                            trailing: Text(
+                              cc.li[index].name,
+                              style: buildTextStyle2(),
+                            ),
                           );
                         },
                         separatorBuilder: (context, index) {
-                          return Divider(endIndent: 15,indent: 15,
-                            thickness: .4,color: mainColor2,
-                            // endIndent:index%2==1? 65:10,
-                            // indent:index%2==0? 65:10,
+                          return Divider(
+                            //endIndent: 15,indent: 15,
+                            thickness: .4, color: mainColor2,
+                            endIndent: index % 2 == 1 ? 65 : 10,
+                            indent: index % 2 == 0 ? 65 : 10,
                           );
                         },
                         itemCount: cc.li.length),
+                  ),
+                  Divider(
+                    thickness: .4,
+                    color: mainColor2,
+                    indent: 60,
+                    endIndent: 60,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -452,9 +470,7 @@ class PrayerTimeScreen extends GetView<PrayerAndLocationController> {
 
   TextStyle buildTextStyle2() {
     return TextStyle(
-                                  fontSize: 21,
-                                  fontWeight: FontWeight.bold,
-                                  fontStyle: FontStyle.normal);
+        fontSize: 21, fontWeight: FontWeight.bold, fontStyle: FontStyle.normal);
   }
 
   TextStyle buildTextStyle() {

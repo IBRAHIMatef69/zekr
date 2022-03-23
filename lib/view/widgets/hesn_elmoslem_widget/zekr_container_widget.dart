@@ -1,9 +1,9 @@
 import 'package:clipboard/clipboard.dart';
 import 'package:flutter/material.dart';
 
-
 class ZekrContainerWidget extends StatelessWidget {
   final String zekrBody;
+  final String zekrCategory;
   final int zekrCount;
   final Color r;
   final Color g;
@@ -11,14 +11,19 @@ class ZekrContainerWidget extends StatelessWidget {
   final Function() onTap;
   final Function() onPressed;
 
-    ZekrContainerWidget(
+  ZekrContainerWidget(
       {Key? key,
       required this.zekrBody,
       required this.zekrCount,
       required this.r,
-      required this.g, required this.onTap, required this.onPressed, required this.color})
+      required this.g,
+      required this.onTap,
+      required this.onPressed,
+      required this.color,
+      required this.zekrCategory})
       : super(key: key);
-   @override
+
+  @override
   Widget build(BuildContext context) {
     return Padding(
         child: Column(
@@ -34,7 +39,7 @@ class ZekrContainerWidget extends StatelessWidget {
                   height: 45,
                   child: Center(
                     child: Text(
-                      'أذكار المساء',
+                      '$zekrCategory',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                           color: Colors.white,
@@ -105,7 +110,6 @@ class ZekrContainerWidget extends StatelessWidget {
                   color: color),
               child: InkWell(
                 onTap: onTap,
-
                 child: Stack(
                   children: [
                     Positioned(
@@ -113,7 +117,7 @@ class ZekrContainerWidget extends StatelessWidget {
                         top: 1,
                         child: IconButton(
                           color: Colors.white,
-                          onPressed:onPressed,
+                          onPressed: onPressed,
                           icon: Icon(Icons.rotate_right),
                         )),
                     Positioned(
