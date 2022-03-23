@@ -121,8 +121,8 @@ class ZekrContainerWidget extends StatelessWidget {
                           icon: Icon(Icons.rotate_right),
                         )),
                     Positioned(
-                      left: 170,
-                      top: 15,
+                      left: MediaQuery.of(context).size.width*.5,
+                      top: MediaQuery.of(context).size.width*.04,
                       child: Container(
                         width: 160,
                         height: 35,

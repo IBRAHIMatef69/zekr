@@ -15,7 +15,7 @@ class HomeController extends GetxController {
     Workmanager().registerPeriodicTask(
       "1",
       "periodic Notification",
-      frequency: Duration(hours: 12,),
+      frequency: Duration(hours: 11,),
     );
 
     Workmanager().registerPeriodicTask(
