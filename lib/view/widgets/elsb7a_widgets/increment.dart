@@ -78,21 +78,24 @@ class Increment extends StatelessWidget {
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(55)),
           child: GetBuilder<Seb7aController>(
             builder: (_) {
-              return InkWell(
-                onTap: () async {
-                  // controller.incrementCounter();
+              return Container(
+                
+                child: InkWell(borderRadius: BorderRadius.circular(55),
+                  onTap: () async {
+                    // controller.incrementCounter();
 
-                  controller.incremant();
-                  controller.viberate();
-                  controller.incrementStorage();
-                  controller.startTimer(1);
-                  // controller.prefsCounter = await _counter;
-                  // _incrementCounter();
-                },
-                child: ClipRRect(
-                  child: Image.asset(
-                    "assets/images/fingerprint.png",
-                    fit: BoxFit.fill,
+                    controller.incremant();
+                    controller.viberate();
+                    controller.incrementStorage();
+                    controller.startTimer(1);
+                    // controller.prefsCounter = await _counter;
+                    // _incrementCounter();
+                  },
+                  child: ClipRRect(
+                    child: Image.asset(
+                      "assets/images/fingerprint.png",
+                      fit: BoxFit.fill,
+                    ),
                   ),
                 ),
               );
